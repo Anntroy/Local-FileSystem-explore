@@ -1,10 +1,10 @@
 <?php
 $initialPathName = 'home';
-$initialPath = '.\\'.$initialPathName;
+$initialPath = './'.$initialPathName;
 if (isset($_GET['path'])) {
     //echo $_GET['path'];
-    $pathToShow = $initialPath.'\\'.$_GET['path'];
-    $pathName = $initialPathName.'\\'.$_GET['path'];
+    $pathToShow = $initialPath.'/'.$_GET['path'];
+    $pathName = $initialPathName.'/'.$_GET['path'];
 } else {
     $pathToShow = $initialPath;
     $pathName = $initialPathName;
@@ -65,14 +65,14 @@ if (is_dir($pathToShow)) {
                     # code...
                     break;
             }
-            $size = filesize($pathToShow.'\\'.$entry);
+            $size = filesize($pathToShow.'/'.$entry);
             if ($size<1000000) {
                 $size = $size/1000 . "kB";
             } elseif ($size>1000000) {
                 $size = $size/1000000 . "MB";
             };
-            $createdDate = date("d/m/Y H:i:s.", filectime($pathToShow.'\\'.$entry));
-            $modificatedDate = date("d/m/Y H:i:s.", filemtime($pathToShow.'\\'.$entry));
+            $createdDate = date("d/m/Y H:i:s.", filectime($pathToShow.'/'.$entry));
+            $modificatedDate = date("d/m/Y H:i:s.", filemtime($pathToShow.'/'.$entry));
             echo '<ul class="item-list item-list-element">
             <li class="item-prop item-prop-cont item-prop-name"><i class="'.$iconType .'" aria-hidden="false"></i><a href="index.php?path='.$entry.'">'.$entry.'</a></li>
             <li class="item-prop item-prop-cont">'.$extension.'</li>
