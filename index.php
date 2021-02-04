@@ -17,6 +17,9 @@
             <li class="item-prop item-prop-header">Created Date</li>
             <li class="item-prop item-prop-header">Modificated</li>
         </ul>
+        <?php
+            include("Views/mainArea.php")
+        ?>
     </main>
 </body>
 </html>
