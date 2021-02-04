@@ -9,7 +9,6 @@ if (isset($_GET['path'])) {
     $pathToShow = $initialPath;
     $pathName = $initialPathName;
 }
-echo $pathToShow;
 if (is_dir($pathToShow)) {
     //openDirectory();
     $handlePath = opendir($pathToShow);
