@@ -10,7 +10,11 @@ ol, ul {
 }
 /* ------ */
 .wrapper {
-    width: 90%;
+    height: 30vh;
+    width: 80vw;
+    position: fixed;
+    top: 0;
+    left: 20vw;
     background-color: burlywood;
     display: grid;
     grid-template-columns: 100%;

@@ -1,0 +1,46 @@
+/* Reset */
+ul {
+    list-style-type: none;
+    border: 0;
+    padding-left: 1rem;
+    font: inherit;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ASIDE AREA */
+.aside {
+    height: 100vh;
+    width: 17.5vw;
+    background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+}
+
+.aside__summary {
+    margin-left: 1rem;
+    outline: none;
+}
+
+.aside__summary-text {
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.aside__list-item {
+    margin: 0.8rem 0;
+}
+
+.aside__list-text {
+    vertical-align: middle;
+    margin-left: 0.3rem;
+}
