@@ -72,12 +72,13 @@ if (is_dir($pathToShow)) {
                 $size = $size/1000000 . "MB";
             };
             $createdDate = date("d/m/Y H:i:s.", filectime($pathToShow.'\\'.$entry));
+            $modificatedDate = date("d/m/Y H:i:s.", filemtime($pathToShow.'\\'.$entry));
             echo '<ul class="item-list item-list-element">
             <li class="item-prop item-prop-cont item-prop-name"><i class="'.$iconType .'" aria-hidden="false"></i><a href="index.php?path='.$entry.'">'.$entry.'</a></li>
             <li class="item-prop item-prop-cont">'.$extension.'</li>
             <li class="item-prop item-prop-cont">'.$size.'</li>
             <li class="item-prop item-prop-cont">'.$createdDate.'</li>
-            <li class="item-prop item-prop-cont">Modificated</li>
+            <li class="item-prop item-prop-cont">'.$modificatedDate.'</li>
         </ul>';
             //echo '<ul class="item-list"><i class="icon icon-folder"></i>'.$pathName.'</ul>'
             //echo '<li class="nav-item"><i class="'.$iconType .'" aria-hidden="false"></i><a href="index.php?path='.$entry.'">'.$entry.'</a></li>';
