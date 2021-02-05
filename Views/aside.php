@@ -1,5 +1,5 @@
 <?php
-    $root = "/opt/lampp/htdocs/Local-FileSystem-explore/Home/";
+    $root = "Home/";
     $dir = $root;
     function obteinDirectoryStructure($path){
         if (is_dir($path)){
@@ -12,10 +12,10 @@
 
                 if ($file != "." && $file != "..") {
                     if (is_dir($full_path)) {
-                        echo '<li class="aside__list-item"><a href="../Controllers/openFolder.php?path='.$full_path.'"><i class="far fa-folder"></i><span class="aside__list-text">' . $file . '</span></a></li>';
+                        echo '<li class="aside__list-item"><a href="index.php?path='.$file.'"><i class="far fa-folder"></i><span class="aside__list-text">' . $file . '</span></a></li>';
                         obteinDirectoryStructure($full_path);
                     } else {
-                        echo '<li class="aside__list-item"><a href="../Controllers/openFolder.php?path='.$full_path.'"><i class="fa fa-file-o"></i><span class="aside__list-text">'. $file . '</span></a></li>';
+                        echo '<li class="aside__list-item"><a href="index.php?path='.$file.'"><i class="fa fa-file-o"></i><span class="aside__list-text">'. $file . '</span></a></li>';
                     }
                 }
             }
