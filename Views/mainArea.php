@@ -76,7 +76,7 @@ if (is_dir($pathToShow)) {
 
             $createdDate = date("d/m/Y H:i:s.", filectime($pathToShow.'/'.$entry));
             $modificatedDate = date("d/m/Y H:i:s.", filemtime($pathToShow.'/'.$entry));
-          
+
             echo '<ul class="item-list item-list-element">
             <li class="item-prop item-prop-cont item-prop-name"><i class="'.$iconType .'" aria-hidden="false"></i><a href="index.php?path='.$entry.'">'.$entry.'</a></li>
             <li class="item-prop item-prop-cont">'.$extension.'</li>

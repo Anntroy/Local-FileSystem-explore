@@ -9,13 +9,15 @@
             while (($file = readdir($manager)) !== false)  {
 
             $full_path = $path . "/" . $file;
+            $pos = strpos($full_path, '//');
+            $short_path = substr($full_path, $pos + 2);
 
                 if ($file != "." && $file != "..") {
                     if (is_dir($full_path)) {
-                        echo '<li class="aside__list-item"><a href="index.php?path='.$file.'"><i class="far fa-folder"></i><span class="aside__list-text">' . $file . '</span></a></li>';
+                        echo '<li class="aside__list-item"><a href="index.php?path='.$short_path.'"><i class="far fa-folder"></i><span class="aside__list-text">' . $file . '</span></a></li>';
                         obteinDirectoryStructure($full_path);
                     } else {
-                        echo '<li class="aside__list-item"><a href="index.php?path='.$file.'"><i class="fa fa-file-o"></i><span class="aside__list-text">'. $file . '</span></a></li>';
+                        echo '<li class="aside__list-item"><a href="index.php?path='.$short_path.'"><i class="fa fa-file-o"></i><span class="aside__list-text">'. $file . '</span></a></li>';
                     }
                 }
             }
