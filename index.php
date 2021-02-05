@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="Css/mainViewArea.css">
 </head>
 <aside class="aside">
+    <?php
+        session_start();
+        $currentFile = $_GET['filePath'];
+        $currentFolder = $_GET['folderPath'];
+        $p = strpos($currentFolder, 'Home/');
+        $showCurrentFolder = substr($currentFolder, $p + 5);
+        echo "Current path: " .$showCurrentFolder;
+        $_SESSION['currentFolder'] = $currentFolder;
+    ?>
+    <br>
+    <br>
+    <form action="">
+        <input type="text" name="newFolder" placeholder="Enter new folder name..." required>
+        <button type="submit" formaction='createDirectory.php?'><i class="fa fa-folder-plus fa-lg"></i></button>
+    </form>
+    <br>
     <details open>
         <summary class="aside__summary">
             <i class="fas fa-home fa-lg"></i><span class="aside__summary-text">Home</span>

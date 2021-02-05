@@ -6,7 +6,7 @@ a {
 
 /* ASIDE AREA */
 .aside {
-    height: 100vh;
+    height: 90vh;
     width: 17.5vw;
     background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
     position: fixed;
