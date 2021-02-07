@@ -9,21 +9,12 @@
     <link rel="stylesheet" href="Css/mainViewArea.css">
 </head>
 <aside class="aside">
-    <?php
-        session_start();
-        $currentFile = $_GET['filePath'];
-        $currentFolder = $_GET['folderPath'];
-        $p = strpos($currentFolder, 'Home/');
-        $showCurrentFolder = substr($currentFolder, $p + 5);
-        echo "Current path: " .$showCurrentFolder;
-        $_SESSION['currentFolder'] = $currentFolder;
-    ?>
+    <?php include("Views/getCurrentFolder.php"); ?>
     <br>
+    <?php include("Views/createDirectoryForm.php"); ?>
     <br>
-    <form action="">
-        <input type="text" name="newFolder" placeholder="Enter new folder name..." required>
-        <button type="submit" formaction='createDirectory.php?'><i class="fa fa-folder-plus fa-lg"></i></button>
-    </form>
+    <?php include("Views/renameDirectoryForm.php"); ?>
+    <br>
     <br>
     <details open>
         <summary class="aside__summary">
