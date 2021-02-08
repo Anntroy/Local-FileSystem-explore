@@ -23,7 +23,11 @@ class folderToShow {
             $d = dir($this->path);
             while (false !== ($entry = $d->read())) {
                 if ($entry != "." && $entry != "..") {
-                    $this->content[] = new folder ($entry, $this->path);
+                    if (is_dir($entry)) {
+                        $this->content[] = new folder ($entry, $this->path);
+                    } else {
+                        $this->content[] = new file ($entry, $this->path);
+                    }
                 };
                 }
             $d->close();
@@ -41,6 +45,7 @@ class folder {
     public $createdDate;
     public $modificatedDate;
     public $extension;
+    public $icon;
 
     function  __construct($name, $path) {
         $this->name = $name;
@@ -58,6 +63,7 @@ class folder {
         $this->size = $mysize;
         $extension = "folder";
         $this->extension = $extension;
+        $this->icon = '<i class="far fa-folder"></i>';
     }
 }
 
@@ -68,6 +74,7 @@ class file {
     public $createdDate;
     public $modificatedDate;
     public $extension;
+    public $icon;
 
     function  __construct($name, $path) {
         $this->name = $name;
@@ -85,6 +92,54 @@ class file {
         $this->size = $mysize;
         $extension = pathinfo($this->name, PATHINFO_EXTENSION);
         $this->extension = $extension;
+
+        switch ($this->extension) {
+            case 'doc':
+                $this->icon = '<i class="fa fa-file-o"></i>';
+                break;
+            case 'csv':
+                $this->icon = '<i class="fa fa-file-o"></i>';
+                break;
+            case 'jpg':
+                $this->icon = '<i class="fa fa-file-o"></i>';
+                break;
+            case 'png':
+                $this->icon = '<i class="fa fa-file-o"></i>';
+                break;
+            case 'txt':
+                $this->icon = '<i class="fa fa-file-o"></i>';
+                break;
+            case 'ppt':
+                # code...
+                break;
+            case 'odt':
+                # code...
+                break;
+            case 'pdf':
+                    # code...
+                break;
+            case 'zip':
+                # code...
+                break;
+            case 'rar':
+                # code...
+                break;
+            case 'exe':
+                    # code...
+                break;
+            case 'svg':
+                # code...
+                break;
+            case 'mp3':
+                # code...
+                break;
+            case 'mp4':
+                    # code...
+                break;
+            default:
+                # code...
+                break;
+        }
     }
 }
 
@@ -126,6 +181,5 @@ if (isset($_GET['newName'])) {
 is going to be create the new object, folderToShow,  */
 $folderShowed = new FolderToShow ();
 $folderContent = $folderShowed->get_content();
-
 
 ?>

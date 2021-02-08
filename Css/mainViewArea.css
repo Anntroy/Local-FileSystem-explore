@@ -58,11 +58,13 @@ form {
 .item-list-element:hover {
     background-color: rgb(75, 75, 75);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(29, 29, 29);
 }
 
 .selection {
     background-color: rgb(29, 29, 29);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(29, 29, 29);
 }
 
 .input-newFolderName{
