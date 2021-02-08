@@ -1,5 +1,5 @@
 /* Reset */
-ol, ul {
+main ul {
     list-style: none;
     margin: 0;
 	padding: 0;
@@ -61,7 +61,7 @@ form {
 }
 
 .selection {
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(29, 29, 29);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
