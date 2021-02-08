@@ -18,12 +18,8 @@
 <body>
 <aside class="aside">
     <?php include("Views/getCurrentFolder.php"); ?>
-    <br><!-- 
-    <?php include("Views/createDirectoryForm.php"); ?> -->
     <br>
-    <!-- <?php include("Views/renameDirectoryForm.php"); ?> -->
-    <br>
-    <!-- <?php include("Views/deleteDirectoryForm.php"); ?> -->
+    <?php include("Views/uploadForm.php"); ?>
     <br>
     <br>
     <details open>
@@ -35,7 +31,7 @@
 </aside>
 <nav class="nav nav-container">
     <?php
-    //Llamada a la vista    
+    //Llamada a la vistas
             include("Views/nav_view.php")
         ?>
     </nav>
