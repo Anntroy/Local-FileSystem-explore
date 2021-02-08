@@ -19,9 +19,7 @@
 <body>
 <aside class="aside">
     <?php include("Views/getCurrentFolder.php"); ?>
-    <!-- <?php //include("Views/createDirectoryForm.php"); ?> -->
-    <!-- <?php //include("Views/renameDirectoryForm.php"); ?> -->
-    <!-- <?php //include("Views/deleteDirectoryForm.php"); ?> -->
+    <?php include("Views/uploadForm.php"); ?>
     <details open>
         <summary class="aside__summary">
             <i class="fas fa-home fa-lg"></i><span class="aside__summary-text">Home</span>
@@ -32,7 +30,7 @@
 <main>
     <nav class="nav nav-container">
     <?php
-    //Llamada a la vista    
+    //Llamada a la vistas
             include("Views/nav_view.php")
         ?>
     </nav>
