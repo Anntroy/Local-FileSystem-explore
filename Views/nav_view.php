@@ -7,9 +7,9 @@ echo '<nav class="nav nav-container">
 <ul class="nav-list nav-list-funcionality">
     <li class="nav-item"><a class="rename"><i class="fas fa-edit"></i>Rename</a></li>
     <li class="nav-item"><a href="index.php?path='.$folderShowed->path.'&new=true">new folder</a></li>
-    <li class="nav-item"><a href=""><i class="fas fa-file-upload"></i></a></li>
+    <li class="nav-item"><a href="./Views/uploadForm.php"><i class="fas fa-file-upload"></i></a></li>
     <li class="nav-item"><a href=""><i class="fas fa-trash-alt"></i></a></li>
     <li class="nav-item">Search</li>
-</ul>
-</nav>';
+    </ul>
+    </nav>';
 ?>
