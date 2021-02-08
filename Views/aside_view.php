@@ -4,7 +4,7 @@
     function obteinDirectoryStructure($path){
         if (is_dir($path)){
             $manager = opendir($path);
-            echo "<ul>";
+            echo "<ul class='aside_ul'>";
 
             while (($file = readdir($manager)) !== false)  {
 
@@ -19,7 +19,7 @@
                         echo '<li class="aside__list-item"><a href="index.php?folderPath='.$full_path.'&path='.$full_path.'"><i class="far fa-folder"></i><span class="aside__list-text">' . $file . '</span></a></li>';
                         obteinDirectoryStructure($full_path);
                     } else {
-                        echo '<li class="aside__list-item"><a href="index.php?filePath='.$full_path.'"><i class="fa fa-file-o"></i><span class="aside__list-text">'. $file . '</span></a></li>';
+                        echo '<li class="aside__list-item"><a href="./'.$full_path.'" target="image"><i class="fa fa-file-o"></i><span class="aside__list-text">'. $file . '</span></a></li>';
                     }
                 }
             }

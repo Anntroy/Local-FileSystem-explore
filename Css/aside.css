@@ -7,26 +7,26 @@ a {
 /* ASIDE AREA */
 .aside {
     width: 20%;
+    height: 100%;
     background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1; */
-    padding: 10px 3px 7px 10px;
-    /* padding: 1.5rem 0.3rem 0.5rem 1.5rem; */
-    overflow-x: hidden;
+    padding: 15px 10px 7px 7px;
+    overflow-x: auto;
     border-right: 2px solid rgba(128, 128, 128, 0.494);
 }
 
 .aside__summary {
-    margin-left: 0.8rem;
+    margin-left: 5px;
     outline: none;
+}
+
+.aside_ul {
+    padding-inline-start: 18px;
 }
 
 .aside__summary-text {
     vertical-align: middle;
-    margin-left: 0.5rem;
-    font-size: 1.5rem;
+    margin-left: 5px;
+    font-size: 100%;
 }
 
 .aside__list-item {
@@ -35,7 +35,7 @@ a {
     border: 0;
     /* padding-left: 1rem; */
     font: inherit;
-    font-size: 1.2rem;
+    font-size: 100%;
 }
 
 .aside__list-text {
