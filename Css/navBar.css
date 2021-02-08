@@ -1,21 +1,18 @@
 .nav-container {
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    background-color: blue;
-    height: 30px;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
 }
 .nav-list {
     display: flex;
     align-items: center;
-    border: 2px solid aqua;
-    height: 30px;
 }
 .nav-list-navegation{
-    width: 60%;
+    width: 65%;
 }
 .nav-list-funcionality{
-    width: 40%;
+    width: 45%;
     justify-content: space-around;
 }
 

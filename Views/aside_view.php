@@ -16,7 +16,6 @@
                     $pathArray = explode("/", $full_path);
                     $pathArrayLength = count($pathArray)-1;
                     if (is_dir($full_path)) {
-                        echo $full_path. '<br>';
                         echo '<li class="aside__list-item"><a href="index.php?folderPath='.$full_path.'&path='.$full_path.'"><i class="far fa-folder"></i><span class="aside__list-text">' . $file . '</span></a></li>';
                         obteinDirectoryStructure($full_path);
                     } else {

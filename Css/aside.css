@@ -6,15 +6,16 @@ a {
 
 /* ASIDE AREA */
 .aside {
-    height: 90vh;
-    width: 17.5vw;
+    width: 20%;
     background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    padding: 2rem 0.3rem 0.5rem 0.1rem;
+    z-index: 1; */
+    padding: 10px 3px 7px 10px;
+    /* padding: 1.5rem 0.3rem 0.5rem 1.5rem; */
     overflow-x: hidden;
+    border-right: 2px solid rgba(128, 128, 128, 0.494);
 }
 
 .aside__summary {

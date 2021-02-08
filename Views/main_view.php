@@ -24,7 +24,7 @@ if (is_dir($folderShowed->path) && $folderContent!= null && $rename = false) {
                     <form action="index.php" method="get">
                         <input type="hidden" name="pathToRename" value='.$folder->path.'/>
                         <input type="hidden" name="oldName" value='.$folder->name.'>
-                        <li class="item-prop item-prop-cont item-prop-name"><i class="" aria-hidden="false"></i><input class="input input-newFolderName" type="text" name="newName" id="newName" placeholder='.$folder->name.' autofocus></li>
+                        <li class="item-prop item-prop-cont item-prop-name input-container"><i class="" aria-hidden="false"></i><input class="input input-newFolderName" type="text" name="newName" id="newName" placeholder='.$folder->name.' autofocus></li>
                     </form>
                 </ul>';
         } else {
@@ -41,8 +41,9 @@ if (is_dir($folderShowed->path) && $folderContent!= null && $rename = false) {
 if ($createNewFolder == true) {
     echo '<ul class="item-list item-list-newElement">
         <form action="index.php" method="get">
+            <input type="hidden" name="path" value='.$folderShowed->path.'/>
             <input type="hidden" name="pathToCreate" value='.$folderShowed->path.'/>
-            <li class="item-prop item-prop-cont item-prop-name"><i class="" aria-hidden="false"></i><input class="input input-newFolderName" type="text" name="newFolderName" id="newFolderName" placeholder="New folder"></li>
+            <li class="item-prop item-prop-cont item-prop-name input-container"><i class="" aria-hidden="false"></i><input class="input input-newFolderName" type="text" name="newFolderName" id="newFolderName" placeholder="New folder"></li>
         </form>
     </ul>';
 }

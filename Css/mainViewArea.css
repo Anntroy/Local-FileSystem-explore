@@ -8,14 +8,15 @@ ol, ul {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* ------ */
-body {
-    display: flex;
-    width: 100%;
+form {
+    margin: 0;
+    padding: 0;
+    width: max-content;
 }
+/* ------ */
+
 .wrapper {
-    width: 90%;
-    background-color: burlywood;
+    width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 30px;
@@ -25,11 +26,10 @@ body {
     grid-template-columns: 42% 8% 10% 20% 20%;
     grid-template-rows: 30px;
     width: 100%;
-    background-color: darkgreen;
 }
 
 .item-list-header {
-    background-color: darkgray;
+    background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
 }
 
 .item-prop {
@@ -38,7 +38,7 @@ body {
     align-items: center;
 }
 .item-prop-header {
-    background-color: rgb(140, 140, 140);
+    background-color: darkgray;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     font-size: 15px;
     font-weight: bold;
@@ -46,18 +46,26 @@ body {
 }
 .item-prop-name {
     justify-self: start;
+    margin-left: 20px;
 }
-
+.input-container{
+    margin: 0;
+}
 .item-list-element {
-    background-color: rgb(240, 240, 240);
+    background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .item-list-element:hover {
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(75, 75, 75);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .selection {
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(75, 75, 75);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.input-newFolderName{
+    justify-self: start;
+    margin-left: 20px;
 }
