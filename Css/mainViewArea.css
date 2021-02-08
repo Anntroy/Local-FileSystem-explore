@@ -9,12 +9,12 @@ ol, ul {
 	vertical-align: baseline;
 }
 /* ------ */
+body {
+    display: flex;
+    width: 100%;
+}
 .wrapper {
-    height: auto;
-    width: 80vw;
-    position: fixed;
-    top: 0;
-    left: 20vw;
+    width: 90%;
     background-color: burlywood;
     display: grid;
     grid-template-columns: 100%;
@@ -53,6 +53,11 @@ ol, ul {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .item-list-element:hover {
+    background-color: rgb(33, 33, 33);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.selection {
     background-color: rgb(33, 33, 33);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
