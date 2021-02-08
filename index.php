@@ -8,35 +8,36 @@
     <link rel="stylesheet" href="Css/aside.css">
     <link rel="stylesheet" href="Css/mainViewArea.css">
 </head>
+<?php
+    //Llamada al modelo
+    require('Models/folder_model.php');
+    ?>
 <aside class="aside">
     <?php include("Views/getCurrentFolder.php"); ?>
+    <br><!-- 
+    <?php include("Views/createDirectoryForm.php"); ?> -->
     <br>
-    <?php include("Views/createDirectoryForm.php"); ?>
+    <!-- <?php include("Views/renameDirectoryForm.php"); ?> -->
     <br>
-    <?php include("Views/renameDirectoryForm.php"); ?>
-    <br>
-    <?php include("Views/deleteDirectoryForm.php"); ?>
+    <!-- <?php include("Views/deleteDirectoryForm.php"); ?> -->
     <br>
     <br>
     <details open>
         <summary class="aside__summary">
             <i class="fas fa-home fa-lg"></i><span class="aside__summary-text">Home</span>
         </summary>
-        <?php include("Views/aside.php"); ?>
+        <?php include("Views/aside_view.php"); ?>
     </details>
 </aside>
 <body>
     <main class="wrapper">
-        <ul class="item-list item-list-header">
-            <li class="item-prop item-prop-header">Name</li>
-            <li class="item-prop item-prop-header">Type</li>
-            <li class="item-prop item-prop-header">Size</li>
-            <li class="item-prop item-prop-header">Created Date</li>
-            <li class="item-prop item-prop-header">Modificated</li>
-        </ul>
         <?php
-            include("Views/mainArea.php");
-        ?>
+    //Llamada al modelo
+    //require('Models/folder_model.php');
+
+    //Llamada a la vista
+    require("Views/main_view.php");
+    ?>
     </main>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>

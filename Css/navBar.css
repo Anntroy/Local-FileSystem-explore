@@ -1,0 +1,28 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    background-color: blue;
+    height: 30px;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    border: 2px solid aqua;
+    height: 30px;
+}
+.nav-list-navegation{
+    width: 60%;
+}
+.nav-list-funcionality{
+    width: 40%;
+    justify-content: space-around;
+}
+
+.nav-item {
+    padding: 10px;
+}
+
+.nav-list-navegation i{
+    margin-right: 5px;
+}
