@@ -1,12 +1,4 @@
 /* Reset */
-ul {
-    list-style-type: none;
-    border: 0;
-    padding-left: 1rem;
-    font: inherit;
-    font-size: 1.2rem;
-}
-
 a {
     text-decoration: none;
     color: black;
@@ -14,19 +6,19 @@ a {
 
 /* ASIDE AREA */
 .aside {
-    height: 100vh;
+    height: 90vh;
     width: 17.5vw;
     background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    padding: 2rem 1rem;
+    padding: 2rem 0.3rem 0.5rem 0.1rem;
     overflow-x: hidden;
 }
 
 .aside__summary {
-    margin-left: 1rem;
+    margin-left: 0.8rem;
     outline: none;
 }
 
@@ -37,7 +29,12 @@ a {
 }
 
 .aside__list-item {
-    margin: 0.8rem 0;
+    margin: 0.4rem 0;
+    list-style-type: none;
+    border: 0;
+    /* padding-left: 1rem; */
+    font: inherit;
+    font-size: 1.2rem;
 }
 
 .aside__list-text {

@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="Css/mainViewArea.css">
 </head>
 <aside class="aside">
+    <?php include("Views/getCurrentFolder.php"); ?>
+    <br>
+    <?php include("Views/createDirectoryForm.php"); ?>
+    <br>
+    <?php include("Views/renameDirectoryForm.php"); ?>
+    <br>
+    <?php include("Views/deleteDirectoryForm.php"); ?>
+    <br>
+    <br>
     <details open>
         <summary class="aside__summary">
             <i class="fas fa-home fa-lg"></i><span class="aside__summary-text">Home</span>
