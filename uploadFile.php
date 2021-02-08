@@ -9,7 +9,6 @@
         $fileName = $_FILES['the_file']['name'];
         $fileSize = $_FILES['the_file']['size'];
         $fileTmpName = $_FILES['the_file']['tmp_name'];
-        echo $fileTmpName;
         $fileType = $_FILES['the_file']['type'];
         $fileExtension = strtolower(end(explode('.',$fileName)));
 
@@ -32,17 +31,11 @@
             if ($didUpload) {
                 header("location: ./index.php");
             } else {
-                header('Refresh:10; url=index.php');
-                echo "<article><form class='modal__form'><div class='modal__form-div'><h2 class='modal__form-div-h2 error'>Error</h2><hr><div><label class='modal__form-div-label error'><b>An error occurred. Please contact the administrator!</b></label></div></div></form></article>";
-                // echo "<script> alert('An error occurred. Please contact the administrator.'); </script>";
-                // header("location: ./index.php");
+                header("location: ./Views/showError.php");
             }
         } else {
             foreach ($errors as $error) {
-                header('Refresh:10; url=index.php');
-                echo "<article><form class='modal__form'><div class='modal__form-div'><h2 class='modal__form-div-h2 error'>Error</h2><hr><div><label class='modal__form-div-label error'><b>'".$error."'</b></label></div></div></form></article>";
-                // echo "<script> alert('".$error."'); </script>";
-                // header("location: ./index.php");
+                header("location: ./Views/showError.php?error1=$error");
             }
         }
 
