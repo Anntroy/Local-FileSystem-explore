@@ -15,6 +15,8 @@
     <br>
     <?php include("Views/renameDirectoryForm.php"); ?>
     <br>
+    <?php include("Views/deleteDirectoryForm.php"); ?>
+    <br>
     <br>
     <details open>
         <summary class="aside__summary">

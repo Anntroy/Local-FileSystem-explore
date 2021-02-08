@@ -10,5 +10,5 @@
         var_dump($rename);
     };
     renameDirectory();
-    header("location: ../index.php");
+    // header("location: ../index.php");
 ?>
