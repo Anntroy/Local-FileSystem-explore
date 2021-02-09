@@ -10,11 +10,11 @@ echo '<nav class="nav nav-container">
     }
 echo '</ul>
 <ul class="nav-list nav-list-funcionality">
-    <li class="nav-item"><a class="rename"><i class="fas fa-edit"></i>Rename</a></li>
-    <li class="nav-item"><a href="index.php?path='.$folderShowed->path.'&new=true">new folder</a></li>
-    <li class="nav-item"><a href=""><i class="fas fa-file-upload"></i></a></li>
-    <li class="nav-item"><a class="delete"><i class="fas fa-trash-alt"></i></a></li>
-    <li class="nav-item">Search</li>
+    <li class="nav-item"><a class="rename" title="Rename folder"><i class="fas fa-edit"></i></a></li>
+    <li class="nav-item"><a href="index.php?path='.$folderShowed->path.'&new=true" title="Add folder"><i class="fas fa-folder-plus"></i></a></li>
+    <li class="nav-item"><a href="./uploadForm.php" title="Upload file"><i class="fas fa-file-upload"></i></a></li>
+    <li class="nav-item"><a class="delete" title="Delete folder"><i class="fas fa-trash-alt"></i></a></li>
+    <li class="nav-item"><i class="fas fa-search"></i></li>
 </ul>
 </nav>';
 ?>

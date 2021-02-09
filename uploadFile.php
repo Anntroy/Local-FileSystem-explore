@@ -35,7 +35,7 @@
             }
         } else {
             foreach ($errors as $error) {
-                header("location: ./Views/showError.php?error1=$error");
+                echo $error . "These are the errors" . "\n";
             }
         }
 
