@@ -13,6 +13,12 @@ class folderToShow {
         } elseif (isset($_GET['pathToRename'])) {
             $pathToShow = $_GET['pathToRename'];
             $pathName = $_GET['pathToRename'];
+        }elseif (isset($_GET['pathToDelete'])) {
+            $pathToShow = $_GET['pathToDelete'];
+            $pathName = $_GET['pathToDelete'];
+        }elseif (isset($_GET['pathToCreate'])) {
+            $pathToShow = $_GET['pathToCreate'];
+            $pathName = $_GET['pathToCreate'];
         }else {
             $pathToShow = $initialPath;
             $pathName = $initialPathName;
@@ -181,10 +187,10 @@ if (isset($_GET['newName'])) {
     rename($oldName, $newName);
 }
 
-if (isset($_GET['pathToDelete']) && isset($_GET['delete'])) {
-    echo (count(scandir($_GET['pathToDelete'])));
-    if(count(scandir($_GET['pathToDelete']))==2){
-        rmdir($_GET['pathToDelete']);
+if (isset($_GET['pathToDelete']) && isset($_GET['folderToDelete']) && isset($_GET['delete'])) {
+    echo (count(scandir($_GET['pathToDelete'].'/'.$_GET['folderToDelete'])));
+    if(count(scandir($_GET['pathToDelete'].'/'.$_GET['folderToDelete']))==2){
+        rmdir($_GET['pathToDelete'].'/'.$_GET['folderToDelete']);
     }
 }
 /* When you call the folder model

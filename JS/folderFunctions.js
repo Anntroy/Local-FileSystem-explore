@@ -9,7 +9,7 @@ function folderSelected () {
     //alert('you click '+$(this).data('path')+' name: '+$(this).data('name'));
     $(".selection").data('path');
     $(".rename").attr('href', "index.php?pathToRename="+$(".selection").data('path')+"&fileToRename="+$(".selection").data('name')+"&rename=true");
-    $(".delete").attr('href', "index.php?pathToDelete="+$(".selection").data('path')+"/"+$(".selection").data('name')+"&delete=true");
+    $(".delete").attr('href', "index.php?pathToDelete="+$(".selection").data('path')+"&folderToDelete="+$(".selection").data('name')+"&delete=true");
 };
 function folderRename () {
     $(".input-newFolderName").focus();
