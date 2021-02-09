@@ -97,46 +97,46 @@ class file {
         $this->extension = $extension;
         switch ($this->extension) {
             case 'doc':
-                $this->icon = '<i class="fa fa-file-o"></i>';
+                $this->icon = '<i class="far fa-file-word"></i>';
                 break;
             case 'csv':
-                $this->icon = '<i class="fa fa-file-o"></i>';
+                $this->icon = '<i class="far fa-file-excel"></i>';
                 break;
             case 'jpg':
-                $this->icon = '<i class="fa fa-file-o"></i>';
+                $this->icon = '<i class="far fa-file-image"></i>';
                 break;
             case 'png':
-                $this->icon = '<i class="fa fa-file-o"></i>';
+                $this->icon = '<i class="far fa-file-image"></i>';
                 break;
             case 'txt':
                 $this->icon = '<i class="fa fa-file-o"></i>';
                 break;
             case 'ppt':
-                # code...
+                $this->icon = '<i class="far fa-file-powerpoint"></i>';
                 break;
             case 'odt':
                 # code...
                 break;
             case 'pdf':
-                    # code...
+                $this->icon = '<i class="far fa-file-pdf"></i>';
                 break;
             case 'zip':
-                # code...
+                $this->icon = '<i class="far fa-file-archive"></i>';
                 break;
             case 'rar':
-                # code...
+                $this->icon = '<i class="far fa-file-archive"></i>';
                 break;
             case 'exe':
-                    # code...
+                $this->icon = '<i class="far fa-file-excel"></i>';
                 break;
             case 'svg':
                 # code...
                 break;
             case 'mp3':
-                # code...
+                $this->icon = '<i class="far fa-file-audio"></i>';
                 break;
             case 'mp4':
-                    # code...
+                $this->icon = '<i class="far fa-file-video"></i>';
                 break;
             default:
                 # code...
@@ -182,6 +182,7 @@ if (isset($_GET['newName'])) {
 }
 
 if (isset($_GET['pathToDelete']) && isset($_GET['delete'])) {
+    echo (count(scandir($_GET['pathToDelete'])));
     if(count(scandir($_GET['pathToDelete']))==2){
         rmdir($_GET['pathToDelete']);
     }
