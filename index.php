@@ -17,7 +17,7 @@
 <body>
 <aside class="aside">
     <?php include("Controllers/getCurrentFolder.php"); ?>
-    <details>
+    <details open>
         <summary class="aside__summary">
             <i class="fas fa-home fa-lg"></i><span class="aside__summary-text">Home</span>
         </summary>
