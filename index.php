@@ -12,13 +12,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <?php
-    //Llamada al modelo
     require('Models/folder_model.php');
     ?>
 <body>
 <aside class="aside">
-    <?php include("Views/getCurrentFolder.php"); ?>
-    <details open>
+    <?php include("Controllers/getCurrentFolder.php"); ?>
+    <details>
         <summary class="aside__summary">
             <i class="fas fa-home fa-lg"></i><span class="aside__summary-text">Home</span>
         </summary>
@@ -28,14 +27,12 @@
 <main>
     <nav class="nav nav-container">
     <?php
-    //Llamada a la vistas
-            include("Views/nav_view.php")
-        ?>
+        include("Views/nav_view.php")
+    ?>
     </nav>
     <section class="wrapper">
-        <?php
-    //Llamada a la vista
-    require("Views/main_view.php");
+    <?php
+        require("Views/main_view.php");
     ?>
     </section>
 </main>
