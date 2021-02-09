@@ -10,7 +10,10 @@ class folderToShow {
         if (isset($_GET['path']) && $_GET['path']!= '..') {
             $pathToShow = $_GET['path'];
             $pathName = $_GET['path'];
-        } else {
+        } elseif (isset($_GET['pathToRename'])) {
+            $pathToShow = $_GET['pathToRename'];
+            $pathName = $_GET['pathToRename'];
+        }else {
             $pathToShow = $initialPath;
             $pathName = $initialPathName;
         }
@@ -23,7 +26,7 @@ class folderToShow {
             $d = dir($this->path);
             while (false !== ($entry = $d->read())) {
                 if ($entry != "." && $entry != "..") {
-                    if (is_dir($entry)) {
+                    if (is_dir($this->path.'/'.$entry)) {
                         $this->content[] = new folder ($entry, $this->path);
                     } else {
                         $this->content[] = new file ($entry, $this->path);
@@ -92,7 +95,6 @@ class file {
         $this->size = $mysize;
         $extension = pathinfo($this->name, PATHINFO_EXTENSION);
         $this->extension = $extension;
-
         switch ($this->extension) {
             case 'doc':
                 $this->icon = '<i class="fa fa-file-o"></i>';
@@ -163,12 +165,14 @@ if (isset($_GET['new']) && $_GET['new'] == true) {
     $createNewFolder = false;
 }
 
-if (isset($_GET['pathToRename']) && isset($_GET['rename'])) {
+if (isset($_GET['pathToRename']) && isset($_GET['fileToRename']) && isset($_GET['rename'])) {
     $rename = true;
     $pathToRename = $_GET['pathToRename'];
+    $fileToRename = $_GET['fileToRename'];
 } else {
     $rename = false;
     $pathToRename = '';
+    $fileToRename = '';
 }
 
 if (isset($_GET['newName'])) {
@@ -177,6 +181,11 @@ if (isset($_GET['newName'])) {
     rename($oldName, $newName);
 }
 
+if (isset($_GET['pathToDelete']) && isset($_GET['delete'])) {
+    if(count(scandir($_GET['pathToDelete']))==2){
+        rmdir($_GET['pathToDelete']);
+    }
+}
 /* When you call the folder model
 is going to be create the new object, folderToShow,  */
 $folderShowed = new FolderToShow ();
