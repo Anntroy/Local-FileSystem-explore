@@ -9,12 +9,10 @@
         $fileName = $_FILES['the_file']['name'];
         $fileSize = $_FILES['the_file']['size'];
         $fileTmpName = $_FILES['the_file']['tmp_name'];
-        echo $fileTmpName;
         $fileType = $_FILES['the_file']['type'];
         $fileExtension = strtolower(end(explode('.',$fileName)));
 
         $uploadPath = $currentDirectory .'/'. basename($fileName);
-        echo $currentDirectory. '<br>';
 
         if (isset($_POST['submit'])) {
 
@@ -33,13 +31,11 @@
             if ($didUpload) {
                 header("location: ./index.php");
             } else {
-                echo "<script> alert('An error occurred. Please contact the administrator.'); </script>";
-                // header("location: ./index.php");
+                header("location: ./Views/showError.php");
             }
         } else {
             foreach ($errors as $error) {
-                echo "<script> alert('".$error."'); </script>";
-                // header("location: ./index.php");
+                header("location: ./Views/showError.php?error1=$error");
             }
         }
 

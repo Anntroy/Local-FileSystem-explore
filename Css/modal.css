@@ -1,0 +1,74 @@
+
+.modal__form {
+    background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
+    margin: 12vh auto 15vh auto;
+    border: 1px solid #888;
+    width: 70vw;
+    max-width: 35rem;
+    border-radius: 5px;
+}
+
+.modal__form-div {
+    padding: 2vh;
+    margin-bottom: 3.5vh;
+}
+
+.modal__form-div-h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(73, 72, 72);
+}
+
+hr {
+    border: 0.6px solid #888;
+    margin-bottom: 2.5rem;
+}
+
+.modal__form-div-label {
+    padding-top: 2vh;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.modal__form-div-label b {
+    color: rgb(73, 72, 72);
+}
+
+span {
+    margin-left: 10px;
+    color: rgb(73, 72, 72);
+}
+
+.error {
+    color: rgb(173, 32, 32);
+    text-align: center;
+}
+
+.btn {
+    padding: 14px 20px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid #888;
+    color: rgb(73, 72, 72);
+}
+
+.btn:hover {
+    border: 1px solid black;
+    opacity:1;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    color: rgb(73, 72, 72);
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: baseline;
+}
